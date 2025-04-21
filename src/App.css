@@ -603,6 +603,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
+  color: #FFB900;
   text-align: center;
   padding-bottom: 60px;
   position: relative;
@@ -612,7 +613,7 @@ section,
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 10px;
-  background: linear-gradient(120deg, var(--heading-color), var(--accent-color));
+  background: linear-gradient(120deg, var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -832,7 +833,9 @@ section,
 .about .about-image {
   position: relative;
 }
-
+.section-title h2{
+ color: #FFB900;
+}
 .about .about-image img {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
