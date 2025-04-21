@@ -112,7 +112,7 @@ function Portfolio() {
                     <div className="portfolio-overlay">
                       <div className="portfolio-actions">
                         <a
-                          href="/videos/demo-video.mp4"
+                           href="https://www.youtube.com/watch?v=QaXZJO1WlRA"
                           className="glightbox preview-link"
                           data-gallery="portfolio-gallery-graphics"
                           data-type="video"
