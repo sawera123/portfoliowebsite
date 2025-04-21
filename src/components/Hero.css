@@ -1,0 +1,155 @@
+.hero-section {
+  padding-top: 2rem; /* 80px navbar + 20px buffer */
+  padding-bottom: 60px;
+  min-height: 100vh;
+  background: #fdfdfd;
+  transition: background 0.3s ease;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+}
+
+body.dark-mode .hero-section {
+  background: #111;
+  color: #f4f4f4;
+}
+
+.typing-text {
+  color: #FFB900;
+}
+.subtitle{
+ font-size: 24px;
+}
+.description-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #111;
+}
+
+/* Floating image effect */
+.floating-img {
+  animation: float 3s ease-in-out infinite;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Buttons */
+/* Custom Button Styles */
+.hero-section-custom-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px; /* Increased padding for better spacing */
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  color: #000; /* Default text color */
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+/* Custom Primary Button (Yellow default) */
+.hero-section-custom-btn.primary-btn {
+  background-color: #FFB900; /* Yellow background */
+  color: #fff; /* White text */
+  border: 2px solid #FFB900;
+}
+
+.hero-section-custom-btn.primary-btn:hover {
+  color: #fff; /* White text on hover */
+}
+
+.hero-section-custom-btn.primary-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFB900;
+  transition: all 0.3s ease-in-out; /* Faster transition for immediate filling */
+  border-radius: 8px; /* Matching radius */
+  z-index: -1;
+  transform: scaleY(0); /* Start with no fill */
+}
+
+.hero-section-custom-btn.primary-btn:hover::after {
+  transform: scaleY(1); /* Animate from bottom to top on hover */
+}
+
+.hero-section-custom-btn.primary-btn:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Custom Secondary Button (Yellow on hover) */
+.hero-section-custom-btn.secondary-btn {
+  background-color: transparent;
+  color: #000; /* Black text */
+  border: 2px solid #FFB900; /* Yellow border */
+}
+
+.hero-section-custom-btn.secondary-btn:hover {
+  color: #fff; /* White text on hover */
+  background-color: #FFB900; /* Yellow background on hover */
+}
+
+.hero-section-custom-btn.secondary-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFB900;
+  transition: all 0.3s ease-in-out; /* Faster transition for immediate filling */
+  border-radius: 8px; /* Matching radius */
+  z-index: -1;
+  transform: scaleY(0); /* Start with no fill */
+}
+
+.hero-section-custom-btn.secondary-btn:hover::after {
+  transform: scaleY(1); /* Animate from bottom to top on hover */
+}
+
+.hero-section-custom-btn.secondary-btn:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Text color transition on hover */
+.hero-section-custom-btn:hover {
+  color: #fff; /* Text turns white on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top:2rem;
+    text-align: center;
+  }
+
+  .floating-img {
+    margin-top: 30px;
+  }
+}
