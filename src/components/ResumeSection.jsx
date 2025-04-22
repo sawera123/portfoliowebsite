@@ -1,100 +1,134 @@
 import React, { useState } from "react";
+import { ChevronDown, ChevronRight, CheckCircle } from "lucide-react";
 import "./ResumeSection.css";
 
-const ResumeSection = () => {
-  const [open, setOpen] = useState({ experience: false, education: false, skills: false });
-
-  const toggleSection = (section) => {
-    setOpen((prev) => ({ ...prev, [section]: !prev[section] }));
-  };
+const ProjectItem = ({ title, client, details }) => {
+  const [open, setOpen] = useState(false);
 
   return (
-    <main className="main">
+    <div className="project-item">
+      <div className="project-header" onClick={() => setOpen(!open)}>
+        <h5>
+          {title} <span>- {client}</span>
+        </h5>
+        {open ? (
+          <ChevronDown size={18} className="icon" />
+        ) : (
+          <ChevronRight size={18} className="icon" />
+        )}
+      </div>
+
+      <div className={`project-details ${open ? "open" : ""}`}>
+        {open && (
+          <ul>
+            {details.map((item, i) => (
+              <li key={i}>
+                <CheckCircle size={14} className="list-icon" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const ResumeSection = () => {
+  return (
     <section className="resume-section py-5" id="resume">
       <div className="container">
-        <h2 className="resume-heading text-center mb-5">My Resume</h2>
-        <div className="row g-4 justify-content-center">
+        <h2 className="resume-heading text-center mb-4">Experience</h2>
 
-          {/* Experience */}
-          <div className="col-md-6">
-            <div className={`resume-box ${open.experience ? "open" : ""}`}>
-              <div className="box-header" onClick={() => toggleSection("experience")}>
-                <h4>Experience</h4>
-                <span className="toggle-icon">{open.experience ? "−" : "+"}</span>
-              </div>
-              <div className={`dropdown-content ${open.experience ? "show" : ""}`}>
-                <div className="item">
-                  <h5>Senior Data Analyst <span>- XYZ Co</span> <small>(2020–Present)</small></h5>
-                  <ul>
-                    <li>Developed Power BI dashboards</li>
-                    <li>Automated Excel reports using VBA</li>
-                    <li>Collaborated cross-functionally</li>
-                  </ul>
-                </div>
-                <div className="item">
-                  <h5>BI Analyst <span>- ABC Inc</span> <small>(2017–2020)</small></h5>
-                  <ul>
-                    <li>Created reporting tools</li>
-                    <li>SQL + Power BI driven insights</li>
-                    <li>Enhanced operational analytics</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Education */}
-          <div className="col-md-6">
-            <div className={`resume-box ${open.education ? "open" : ""}`}>
-              <div className="box-header" onClick={() => toggleSection("education")}>
-                <h4>Education</h4>
-                <span className="toggle-icon">{open.education ? "−" : "+"}</span>
-              </div>
-              <div className={`dropdown-content ${open.education ? "show" : ""}`}>
-                <p><strong>Master’s in Data Analytics</strong> - Uni Name (2013–2015)</p>
-                <p><strong>Bachelor’s in BBA</strong> - Uni Name (2009–2013)</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Skills */}
-          <div className="col-md-10">
-            <div className={`resume-box ${open.skills ? "open" : ""}`}>
-              <div className="box-header" onClick={() => toggleSection("skills")}>
-                <h4>Skills</h4>
-                <span className="toggle-icon">{open.skills ? "−" : "+"}</span>
-              </div>
-              <div className={`dropdown-content ${open.skills ? "show" : ""}`}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <h6>Technical Skills</h6>
-                    <ul>
-                      <li>Excel (Advanced)</li>
-                      <li>Power BI</li>
-                      <li>SQL</li>
-                      <li>Excel VBA</li>
-                      <li>Data Analysis</li>
-                    </ul>
-                  </div>
-                  <div className="col-md-6">
-                    <h6>Soft Skills</h6>
-                    <ul>
-                      <li>Problem Solving</li>
-                      <li>Communication</li>
-                      <li>Project Management</li>
-                      <li>Collaboration</li>
-                      <li>Attention to Detail</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="resume-box mb-4">
+          <h4 className="section-title">Current Role</h4>
+          <p className="company">
+            Adarsh Solution Pvt Ltd, Bangalore (Aug 2024 - Present)
+          </p>
+          <ul>
+            <li>
+              <CheckCircle size={14} className="list-icon" />
+              Prepare detailed project schedules with Primavera P6.
+            </li>
+            <li>
+              <CheckCircle size={14} className="list-icon" />
+              Plan, schedule, manage and monitor work packages and reports.
+            </li>
+            <li>
+              <CheckCircle size={14} className="list-icon" />
+              Verify & update project milestones, KPIs, S-curves & procurement plans.
+            </li>
+            <li>
+              <CheckCircle size={14} className="list-icon" />
+              Weekly updates and client status meetings.
+            </li>
+          </ul>
         </div>
+
+      {/* project section */}
+        <div className="resume-box mb-4">
+          <h4 className="section-title">Projects</h4>
+
+          <ProjectItem
+            title="BH F&P Offshore Support"
+            client="Bakers Hughes, USA"
+            details={[
+              "Tools: Primavera P6, MS Office",
+              "Role: Project Scheduling & Monitoring",
+            ]}
+          />
+          <ProjectItem
+            title="Database Migration"
+            client="Bakers Hughes, USA"
+            details={[
+              "Tools: Primavera P6, MS Office",
+              "Task: Data migration from Oracle to SAP",
+            ]}
+          />
+          <ProjectItem
+            title="Spare Part List Creation"
+            client="Bakers Hughes, USA"
+            details={[
+              "Tools: MS Project Plan 3, MS Office",
+              "Task: Spare part list generation & documentation",
+            ]}
+          />
+        </div>
+        {/* skills section */}
+        <div className="resume-box mb-4">
+          <h4 className="section-title">Skills</h4>
+          <div className="row">
+            <div className="col-md-6">
+              <h6>Functional & Technical</h6>
+              <ul>
+                <li>
+                  <CheckCircle size={14} className="list-icon" />
+                  Primavera P6, MS Project, SAP ECTR, Excel VBA
+                </li>
+                <li>
+                  <CheckCircle size={14} className="list-icon" />
+                  Project Scheduling & Documentation
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-6">
+              <h6>Management & Soft Skills</h6>
+              <ul>
+                <li>
+                  <CheckCircle size={14} className="list-icon" />
+                  Problem Solving, Training, Team Leadership
+                </li>
+                <li>
+                  <CheckCircle size={14} className="list-icon" />
+                  Process Optimization, Planning for OTD
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
-    </main>
   );
 };
 

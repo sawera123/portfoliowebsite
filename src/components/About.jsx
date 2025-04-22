@@ -1,5 +1,6 @@
 import React from "react";
 import heroimg from "../assets/img/hero-section.png";
+import Certificates from './Certificates'
 function About() {
  
   return (
@@ -30,20 +31,20 @@ function About() {
 
     <div className="col-lg-6" data-aos="fade-left" data-aos-delay="300">
       <div className="about-content">
-        <span className="subtitle">About Me</span>
+        <span className="subtitle">About Karthikeyan</span>
 
-        <h2>UI/UX Designer &amp; Web Developer</h2>
+        <h2>Project Engineer &amp; Web Developer</h2>
 
-        <p className="lead mb-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-        <p className="mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+        <p className="lead mb-4"> I'm a passionate Project Engineer having 4+ years of experience in oil and gas as Project/Planning Engineer (Offshore).
+Diligent worker with good communication and task prioritization skills, eager to contribute to team success through
+smart work..</p>
 
         <div className="personal-info">
           <div className="row g-4">
             <div className="col-6">
               <div className="info-item">
                 <span className="label">Name</span>
-                <span className="value">Eliot Johnson</span>
+                <span className="value">Karthikeyan P</span>
               </div>
             </div>
 
@@ -71,14 +72,14 @@ function About() {
             <div className="col-6">
               <div className="info-item">
                 <span className="label">Occupation</span>
-                <span className="value">Lorem Engineer</span>
+                <span className="value">Project Engineer</span>
               </div>
             </div>
 
             <div className="col-6">
               <div className="info-item">
                 <span className="label">Nationality</span>
-                <span className="value">Ipsum</span>
+                <span className="value">India</span>
               </div>
             </div>
           </div>
@@ -98,6 +99,7 @@ function About() {
 
 </section>
         </main>
+        <Certificates/>
     </div>
   );
 }

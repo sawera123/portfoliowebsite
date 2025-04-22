@@ -6,6 +6,7 @@ import Portfolio from "./Portfolio";
 import ResumeSection from "./ResumeSection"
 import ServicesSection from "./ServicesSection";
 import ContactForm from "./ContactForm"
+
 function Hero() {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -37,12 +38,12 @@ function Hero() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 mb-4 mb-lg-0">
-            <h5 className="subtitle mb-3">Hello! This is Karthi</h5>
+            <h5 className="subtitle mb-3">Hello! This is Karthikeyan</h5>
             <h1 className="fw-bold mb-3">
               I'm <span className="typing-text">{text}</span>
             </h1>
             <p className=" mb-4 description-text">
-              I'm a passionate Graphic Designer focused on creating visually stunning and functional designs.
+              I'm a passionate Project Engineer having 4+ years of experience in oil and gas as Project/Planning Engineer (Offshore).
             </p>
 
             <div className="d-flex flex-wrap gap-3">

@@ -54,7 +54,10 @@ function Portfolio() {
               <ul className="portfolio-filters isotope-filters">
                 <li data-filter="*" className="filter-active" onClick={(e) => handleFilterClick(e, "*")}>All Work</li>
                 <li data-filter=".filter-web" onClick={(e) => handleFilterClick(e, ".filter-web")}>Power BI</li>
-                <li data-filter=".filter-graphics" onClick={(e) => handleFilterClick(e, ".filter-graphics")}>Excel</li>
+                <li data-filter=".filter-graphics" onClick={(e) => handleFilterClick(e, ".filter-graphics")}>Excel Automation</li>
+                <li data-filter=".filter-graphics" onClick={(e) => handleFilterClick(e, ".filter-graphics")}>PowerApp </li>
+                <li data-filter=".filter-graphics" onClick={(e) => handleFilterClick(e, ".filter-graphics")}>Power Automate</li>
+                
               </ul>
             </div>
 
