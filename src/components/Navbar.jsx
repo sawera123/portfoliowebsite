@@ -3,15 +3,9 @@ import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleDarkMode = () => setDarkMode(!darkMode);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  useEffect(() => {
-    document.body.className = darkMode ? "dark-mode" : "";
-  }, [darkMode]);
 
   return (
     <header className="main-header sticky-top">
@@ -38,9 +32,6 @@ function Navbar() {
 
 
         <div className="nav-actions">
-          <button onClick={toggleDarkMode} className="mode-btn">
-            {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
           <button onClick={toggleMenu} className="menu-btn">
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
