@@ -6,6 +6,7 @@ import Portfolio from "./Portfolio";
 import ResumeSection from "./ResumeSection"
 import ServicesSection from "./ServicesSection";
 import ContactForm from "./ContactForm"
+import Karthikeyan_Resume from "../assets/Karthikeyan_Resume.pdf"
 
 function Hero() {
   const [text, setText] = useState("");
@@ -47,7 +48,7 @@ function Hero() {
             </p>
 
             <div className="d-flex flex-wrap gap-3">
-              <a href="/resume.pdf" download className="btn hero-section-custom-btn primary-btn">
+              <a href="/Karthikeyan_Resume.pdf" download className="btn hero-section-custom-btn primary-btn">
                 <i className="bi bi-download me-2"></i> Download Resume
               </a>
               <a href="#contact" className="btn hero-section-custom-btn secondary-btn">
