@@ -2,15 +2,18 @@
 section.services {
     background: #F2F2F2;
   }
-  .section-heading{
+  .services-section-heading{
     color: #FFC107;
+    text-align: center;
   }
   .services h1 {
     font-size: 2.5rem;
   }
   
   .services p {
+    text-align: center;
     padding-top: 20px;
+    padding-bottom: 24px;
     font-size: 1.2rem;
   }
   
@@ -77,6 +80,81 @@ section.services {
   
   section.services .card:hover h2,
   section.services .card:hover p {
-    color: #fff;
+    color: #000000;
+  }
+  .star-icon {
+    color: #FFC107;
+    margin-right: 8px;
+    vertical-align: middle;
+    animation: pulse 1.5s infinite ease-in-out;
   }
   
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+  }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  .service-list li {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.6rem;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  section.services .card:hover .service-list li {
+    color: #3f3e3e;
+  }
+  section.services .card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #FFC107;
+    z-index: 0; /* behind all content now */
+    transition: height 0.4s ease;
+    border: none;
+  }
+  
+  section.services .card {
+    background: #FFFFFF;
+    padding: 3rem 2rem;
+    position: relative;
+    padding-top: 5rem;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  
+  /* Ensure content stays on top */
+  section.services .card * {
+    position: relative;
+    z-index: 2;
+  }
+    
+  section.services .card i {
+    color: #FFC107;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+    z-index: 2;
+    position: relative;
+  }
+  
+  section.services .card:hover i {
+    color: #111111; /* Change icon color on hover */
+  }
+  section.services .card:hover .star-icon{
+    color: #111111; /* Change icon color on hover */
+  }
