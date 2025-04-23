@@ -8,6 +8,8 @@ import portfolioimg1 from "../assets/img/portfolio/portfolio-1.webp";
 import portfolioimg2 from "../assets/img/portfolio/portfolio-2.webp";
 import portfolioimg5 from "../assets/img/portfolio/portfolio-5.webp";
 import portfolioimg4 from "../assets/img/portfolio/portfolio-4.webp";
+import portfolioimg7 from "../assets/img/portfolio/portfolio-7.webp";
+import portfolioimg10 from "../assets/img/portfolio/portfolio-10.webp"
 
 function Portfolio() {
   const isotopeContainer = useRef(null);
@@ -53,17 +55,17 @@ function Portfolio() {
             <div className="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
               <ul className="portfolio-filters isotope-filters">
                 <li data-filter="*" className="filter-active" onClick={(e) => handleFilterClick(e, "*")}>All Work</li>
-                <li data-filter=".filter-web" onClick={(e) => handleFilterClick(e, ".filter-web")}>Power BI</li>
-                <li data-filter=".filter-graphics" onClick={(e) => handleFilterClick(e, ".filter-graphics")}>Excel Automation</li>
-                <li data-filter=".filter-graphics" onClick={(e) => handleFilterClick(e, ".filter-graphics")}>PowerApp </li>
-                <li data-filter=".filter-graphics" onClick={(e) => handleFilterClick(e, ".filter-graphics")}>Power Automate</li>
+                <li data-filter=".filter-powerbi" onClick={(e) => handleFilterClick(e, ".filter-powerbi")}>Power BI</li>
+                <li data-filter=".filter-excel" onClick={(e) => handleFilterClick(e, ".filter-excel")}>Excel Automation</li>
+                <li data-filter=".filter-powerapp" onClick={(e) => handleFilterClick(e, ".filter-powerapp")}>PowerApp </li>
+                <li data-filter=".filter-powerautomata" onClick={(e) => handleFilterClick(e, ".filter-powerautomata")}>Power Automate</li>
                 
               </ul>
             </div>
 
             <div className="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300" ref={isotopeContainer}>
               {/* Image Item */}
-              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-powerautomata">
                 <div className="portfolio-card">
                   <div className="portfolio-image">
                     <img src={portfolioimg1} className="img-fluid" alt="" loading="lazy" />
@@ -76,14 +78,14 @@ function Portfolio() {
                     </div>
                   </div>
                   <div className="portfolio-content">
-                    <span className="category">Web Design</span>
+                    <span className="category"> Power Automata </span>
                     <h3>Modern Dashboard Interface</h3>
                   </div>
                 </div>
               </div>
 
               {/* YouTube Video Item */}
-              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-powerautomata">
                 <div className="portfolio-card">
                   <div className="portfolio-image">
                     <img src={portfolioimg2} className="img-fluid" alt="" loading="lazy" />
@@ -102,13 +104,13 @@ function Portfolio() {
                   </div>
                   <div className="portfolio-content">
                     <span className="category">Video Demo</span>
-                    <h3>Project Walkthrough</h3>
+                    <h3>Power Automata</h3>
                   </div>
                 </div>
               </div>
 
               {/* Uploaded Video (MP4) Item */}
-              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
+              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-excel">
                 <div className="portfolio-card">
                   <div className="portfolio-image">
                     <img src={portfolioimg5} className="img-fluid" alt="" loading="lazy" />
@@ -133,7 +135,7 @@ function Portfolio() {
               </div>
 
               {/* Another Image */}
-              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
+              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-powerautomata">
                 <div className="portfolio-card">
                   <div className="portfolio-image">
                     <img src={portfolioimg4} className="img-fluid" alt="" loading="lazy" />
@@ -146,7 +148,48 @@ function Portfolio() {
                     </div>
                   </div>
                   <div className="portfolio-content">
-                    <span className="category">Graphics</span>
+                    <span className="category">Power Automata</span>
+                    <h3>Creative Report Layout</h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Another Image */}
+              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-powerapp">
+                <div className="portfolio-card">
+                  <div className="portfolio-image">
+                    <img src={portfolioimg7} className="img-fluid" alt="" loading="lazy" />
+                    <div className="portfolio-overlay">
+                      <div className="portfolio-actions">
+                        <a href={portfolioimg7} className="glightbox preview-link" data-gallery="portfolio-gallery-graphics">
+                          <i className="bi bi-eye"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="portfolio-content">
+                    <span className="category">Power App</span>
+                    <h3>Creative Report Layout</h3>
+                  </div>
+                </div>
+              </div>
+
+
+              {/* Another Image */}
+              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-powerbi">
+                <div className="portfolio-card">
+                  <div className="portfolio-image">
+                    <img src={portfolioimg10} className="img-fluid" alt="" loading="lazy" />
+                    <div className="portfolio-overlay">
+                      <div className="portfolio-actions">
+                        <a href={portfolioimg10} className="glightbox preview-link" data-gallery="portfolio-gallery-graphics">
+                          <i className="bi bi-eye"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="portfolio-content">
+                    <span className="category">Power Bi</span>
                     <h3>Creative Report Layout</h3>
                   </div>
                 </div>
