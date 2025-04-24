@@ -3,6 +3,7 @@ import './ContactForm.css';
 
 const ContactForm = () => {
   return (
+    <div>
     <div className="contact-container"  id="contact">
       <h2 className="contact-title">Contact Us</h2>
       <form className="contact-form">
@@ -14,7 +15,10 @@ const ContactForm = () => {
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit" className="submit-btn">Send Message</button>
       </form>
+   
     </div>
+       <h2 className="time-is-price">Time is Price</h2>
+       </div>
   );
 };
 

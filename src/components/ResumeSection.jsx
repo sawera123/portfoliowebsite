@@ -46,10 +46,7 @@ const ResumeSection = () => {
             Adarsh Solution Pvt Ltd, Bangalore (Aug 2024 - Present)
           </p>
           <ul>
-            <li>
-              <CheckCircle size={14} className="list-icon" />
-              Prepare detailed project schedules with Primavera P6.
-            </li>
+           
             <li>
               <CheckCircle size={14} className="list-icon" />
               Plan, schedule, manage and monitor work packages and reports.
