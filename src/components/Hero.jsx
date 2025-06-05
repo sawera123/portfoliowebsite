@@ -39,7 +39,7 @@ function Hero() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 mb-4 mb-lg-0">
-            <h5 className="subtitle mb-3">Hello! This is Karthikeyan PMP® FSBI®</h5>
+            <h5 className="subtitle mb-3">Hi! This is Karthikeyan PMP® FSBI®</h5>
             <h1 className="fw-bold mb-3">
               I'm <span className="typing-text">{text}</span>
             </h1>
