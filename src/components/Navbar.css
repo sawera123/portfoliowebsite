@@ -28,7 +28,7 @@ body.dark-mode {
   color: #333;
   transition: background 0.4s ease, color 0.4s ease;
   z-index: 999;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
 }
 
 body.dark-mode .navbar {
@@ -38,7 +38,7 @@ body.dark-mode .navbar {
 
 /* Root Vars */
 :root {
-  --nav-background: #ffffff;
+  --nav-background: #fff;
   --nav-color: #222;
   --accent-color: #FFB900;
   --transition-speed: 0.4s;
@@ -51,7 +51,7 @@ body.dark-mode .navbar {
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 6%);
 }
 
 .nav-container {
@@ -145,11 +145,11 @@ body.dark-mode .navbar {
   display: none;
 }
 
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .nav-center {
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgb(255 255 255 / 95%);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -184,10 +184,10 @@ body.dark-mode .navbar {
 /* Dark Mode Support */
 body.dark-mode {
   --nav-background: #121212;
-  --nav-color: #ffffff;
+  --nav-color: #fff;
   --accent-color: #FFB900;
 }
 
 body.dark-mode .main-header {
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 15px rgb(255 255 255 / 8%);
 }

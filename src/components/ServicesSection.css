@@ -2,10 +2,12 @@
 section.services {
     background: #F2F2F2;
   }
+
   .services-section-heading{
     color: #FFC107;
     text-align: center;
   }
+
   .services h1 {
     font-size: 2.5rem;
   }
@@ -19,7 +21,7 @@ section.services {
   
   /* Card Styles */
   section.services .card {
-    background: #FFFFFF;
+    background: #FFF;
     padding: 3rem 2rem;
     position: relative;
     padding-top: 5rem;
@@ -45,7 +47,7 @@ section.services {
   }
   
   section.services .card p {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato, sans-serif;
     color: #898989;
     line-height: 1.6;
     transition: color 0.3s ease;
@@ -80,8 +82,9 @@ section.services {
   
   section.services .card:hover h2,
   section.services .card:hover p {
-    color: #000000;
+    color: #000;
   }
+
   .star-icon {
     color: #FFC107;
     margin-right: 8px;
@@ -114,6 +117,7 @@ section.services {
   section.services .card:hover .service-list li {
     color: #3f3e3e;
   }
+
   section.services .card::before {
     content: "";
     position: absolute;
@@ -128,7 +132,7 @@ section.services {
   }
   
   section.services .card {
-    background: #FFFFFF;
+    background: #FFF;
     padding: 3rem 2rem;
     position: relative;
     padding-top: 5rem;
@@ -153,8 +157,9 @@ section.services {
   }
   
   section.services .card:hover i {
-    color: #111111; /* Change icon color on hover */
+    color: #111; /* Change icon color on hover */
   }
+
   section.services .card:hover .star-icon{
-    color: #111111; /* Change icon color on hover */
+    color: #111; /* Change icon color on hover */
   }

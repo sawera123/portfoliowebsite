@@ -2,12 +2,11 @@
   padding-top: 2rem; /* 80px navbar + 20px buffer */
   padding-bottom: 60px;
   min-height: 100vh;
-  background: #fdfdfd;
   transition: background 0.3s ease;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 0) 120%
+    rgb(255 255 255 / 100%) 70%,
+    rgb(255 255 255 / 0%) 120%
   );
 }
 
@@ -19,9 +18,11 @@ body.dark-mode .hero-section {
 .typing-text {
   color: #FFB900;
 }
+
 .subtitle{
  font-size: 24px;
 }
+
 .description-text {
   font-size: 18px;
   line-height: 1.6;
@@ -39,12 +40,14 @@ body.dark-mode .hero-section {
   0%, 100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 /* Buttons */
+
 /* Custom Button Styles */
 .hero-section-custom-btn {
   position: relative;
@@ -63,7 +66,7 @@ body.dark-mode .hero-section {
   border: 2px solid transparent;
   color: #000; /* Default text color */
   z-index: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%); /* Added subtle shadow */
 }
 
 /* Custom Primary Button (Yellow default) */
@@ -97,7 +100,7 @@ body.dark-mode .hero-section {
 
 .hero-section-custom-btn.primary-btn:hover {
   transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  box-shadow: 0 8px 12px rgb(0 0 0 / 15%); /* Deeper shadow on hover */
 }
 
 /* Custom Secondary Button (Yellow on hover) */
@@ -132,7 +135,7 @@ body.dark-mode .hero-section {
 
 .hero-section-custom-btn.secondary-btn:hover {
   transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  box-shadow: 0 8px 12px rgb(0 0 0 / 15%); /* Deeper shadow on hover */
 }
 
 /* Text color transition on hover */
@@ -143,7 +146,7 @@ body.dark-mode .hero-section {
 
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .hero-section {
     padding-top:2rem;
     text-align: center;
