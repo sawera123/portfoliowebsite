@@ -1,5 +1,4 @@
-/* Certificates.css */
-.certificates-section {
+ .certificates-section {
     background-color: #fff;
     color: #000;
     padding: 60px 30px;
@@ -104,11 +103,9 @@
   }
   
 
-  /* Add this at the top or bottom of your Certificates.css */
-
+   
 .custom-section-container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px; /* for some horizontal spacing on small screens */
-  }
+    padding: 0 20px;    }
   

@@ -1,5 +1,4 @@
-/* Services Section */
-section.services {
+ section.services {
     background: #F2F2F2;
   }
 
@@ -19,8 +18,7 @@ section.services {
     font-size: 1.2rem;
   }
   
-  /* Card Styles */
-  section.services .card {
+     section.services .card {
     background: #FFF;
     padding: 3rem 2rem;
     position: relative;
@@ -55,8 +53,7 @@ section.services {
     position: relative;
   }
   
-  /* Yellow Bottom Fill Bar */
-  section.services .card::before {
+     section.services .card::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -69,8 +66,7 @@ section.services {
     border: none;
   }
   
-  /* On Hover: Animate Fill from Bottom to Top */
-  section.services .card:hover::before {
+     section.services .card:hover::before {
     height: 100%;
     border: none;
   }
@@ -126,8 +122,7 @@ section.services {
     width: 100%;
     height: 8px;
     background: #FFC107;
-    z-index: 0; /* behind all content now */
-    transition: height 0.4s ease;
+    z-index: 0;      transition: height 0.4s ease;
     border: none;
   }
   
@@ -142,8 +137,7 @@ section.services {
     z-index: 1;
   }
   
-  /* Ensure content stays on top */
-  section.services .card * {
+     section.services .card * {
     position: relative;
     z-index: 2;
   }
@@ -157,9 +151,7 @@ section.services {
   }
   
   section.services .card:hover i {
-    color: #111; /* Change icon color on hover */
-  }
+    color: #111;    }
 
   section.services .card:hover .star-icon{
-    color: #111; /* Change icon color on hover */
-  }
+    color: #111;    }

@@ -24,7 +24,7 @@ function Navbar() {
     <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
   </ul>
 
-  {/* Close icon inside mobile menu */}
+
   <button onClick={toggleMenu} className="menu-btn close-btn">
     {menuOpen ? <FaTimes /> : null}
   </button>

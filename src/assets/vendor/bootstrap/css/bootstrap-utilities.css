@@ -1,9 +1,4 @@
-/*!
- * Bootstrap Utilities v5.3.5 (https://getbootstrap.com/)
- * Copyright 2011-2025 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-:root,
+ :root,
 [data-bs-theme="light"] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -1869,14 +1864,12 @@
   white-space: nowrap !important;
 }
 
-/* rtl:begin:remove */
-.text-break {
+ .text-break {
   word-wrap: break-word !important;
   word-break: break-word !important;
 }
 
-/* rtl:end:remove */
-.text-primary {
+ .text-primary {
   --bs-text-opacity: 1;
 
   color: rgb(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;

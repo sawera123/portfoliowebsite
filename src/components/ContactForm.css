@@ -1,5 +1,4 @@
-/* ContactForm.css */
-
+ 
 .contact-container {
     max-width: 700px;
     margin: 50px auto;
@@ -63,8 +62,7 @@
     background-color: #FFB900;
   }
   
-  /* Responsive */
-  @media (width <= 600px) {
+     @media (width <= 600px) {
     .contact-form .input-group {
       flex-direction: column;
     }

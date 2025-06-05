@@ -1,25 +1,11 @@
-/*!
-  * Bootstrap v5.3.5 (https://getbootstrap.com/)
-  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-  */
-(function (global, factory) {
+ (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bootstrap = factory());
 })(this, (function () { 'use strict';
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/data.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  /**
-   * Constants
-   */
-
+   
+   
   const elementMap = new Map();
   const Data = {
     set(element, key, instance) {
@@ -57,23 +43,12 @@
     }
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
+   
   const MAX_UID = 1000000;
   const MILLISECONDS_MULTIPLIER = 1000;
   const TRANSITION_END = 'transitionend';
 
-  /**
-   * Properly escape IDs selectors to handle weird IDs
-   * @param {string} selector
-   * @returns {string}
-   */
-  const parseSelector = selector => {
+     const parseSelector = selector => {
     if (selector && window.CSS && window.CSS.escape) {
       // document.querySelector needs escaping to handle IDs (html5+) containing for instance /
       selector = selector.replace(/#([^\s"#']+)/g, (match, id) => `#${CSS.escape(id)}`);
@@ -89,10 +64,7 @@
     return Object.prototype.toString.call(object).match(/\s([a-z]+)/i)[1].toLowerCase();
   };
 
-  /**
-   * Public Util API
-   */
-
+   
   const getUID = prefix => {
     do {
       prefix += Math.floor(Math.random() * MAX_UID);
@@ -199,15 +171,7 @@
   };
   const noop = () => {};
 
-  /**
-   * Trick to restart an element's animation
-   *
-   * @param {HTMLElement} element
-   * @return void
-   *
-   * @see https://www.harrytheo.com/blog/2021/02/restart-a-css-animation-with-javascript/#restarting-a-css-animation
-   */
-  const reflow = element => {
+     const reflow = element => {
     element.offsetHeight; // eslint-disable-line no-unused-expressions
   };
   const getjQuery = () => {
@@ -236,8 +200,7 @@
   const defineJQueryPlugin = plugin => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
-      /* istanbul ignore if */
-      if ($) {
+             if ($) {
         const name = plugin.NAME;
         const JQUERY_NO_CONFLICT = $.fn[name];
         $.fn[name] = plugin.jQueryInterface;
@@ -278,16 +241,7 @@
     }, emulatedDuration);
   };
 
-  /**
-   * Return the previous/next element of a list.
-   *
-   * @param {array} list    The list of elements
-   * @param activeElement   The active element
-   * @param shouldGetNext   Choose to get next or previous element
-   * @param isCycleAllowed
-   * @return {Element|elem} The proper element
-   */
-  const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed) => {
+     const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed) => {
     const listLength = list.length;
     let index = list.indexOf(activeElement);
 
@@ -303,18 +257,9 @@
     return list[Math.max(0, Math.min(index, listLength - 1))];
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/event-handler.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   const stripNameRegex = /\..*/;
   const stripUidRegex = /::\d+$/;
@@ -326,10 +271,7 @@
   };
   const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectstart', 'selectend', 'keydown', 'keypress', 'keyup', 'orientationchange', 'touchstart', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gesturestart', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll']);
 
-  /**
-   * Private methods
-   */
-
+   
   function makeEventUid(element, uid) {
     return uid && `${uid}::${uidEvent++}` || element.uidEvent || uidEvent++;
   }
@@ -525,13 +467,7 @@
     return obj;
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/manipulator.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
+   
   function normalizeData(value) {
     if (value === 'true') {
       return true;
@@ -582,18 +518,9 @@
     }
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/config.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Class definition
-   */
-
+   
   class Config {
     // Getters
     static get Default() {
@@ -635,24 +562,12 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap base-component.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const VERSION = '5.3.5';
 
-  /**
-   * Class definition
-   */
-
+   
   class BaseComponent extends Config {
     constructor(element, config) {
       super();
@@ -704,13 +619,7 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/selector-engine.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
+   
   const getSelector = element => {
     let selector = element.getAttribute('data-bs-target');
     if (!selector || selector === '#') {
@@ -793,13 +702,7 @@
     }
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/component-functions.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
+   
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -818,18 +721,9 @@
     });
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap alert.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$f = 'alert';
   const DATA_KEY$a = 'bs.alert';
   const EVENT_KEY$b = `.${DATA_KEY$a}`;
@@ -838,10 +732,7 @@
   const CLASS_NAME_FADE$5 = 'fade';
   const CLASS_NAME_SHOW$8 = 'show';
 
-  /**
-   * Class definition
-   */
-
+   
   class Alert extends BaseComponent {
     // Getters
     static get NAME() {
@@ -881,30 +772,15 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   enableDismissTrigger(Alert, 'close');
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Alert);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap button.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$e = 'button';
   const DATA_KEY$9 = 'bs.button';
   const EVENT_KEY$a = `.${DATA_KEY$9}`;
@@ -913,10 +789,7 @@
   const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="button"]';
   const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
 
-  /**
-   * Class definition
-   */
-
+   
   class Button extends BaseComponent {
     // Getters
     static get NAME() {
@@ -940,10 +813,7 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(document, EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$5, event => {
     event.preventDefault();
     const button = event.target.closest(SELECTOR_DATA_TOGGLE$5);
@@ -951,24 +821,12 @@
     data.toggle();
   });
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Button);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/swipe.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$d = 'swipe';
   const EVENT_KEY$9 = '.bs.swipe';
   const EVENT_TOUCHSTART = `touchstart${EVENT_KEY$9}`;
@@ -991,10 +849,7 @@
     rightCallback: '(function|null)'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Swipe extends Config {
     constructor(element, config) {
       super();
@@ -1077,18 +932,9 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap carousel.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$c = 'carousel';
   const DATA_KEY$8 = 'bs.carousel';
   const EVENT_KEY$8 = `.${DATA_KEY$8}`;
@@ -1145,10 +991,7 @@
     wrap: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Carousel extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -1412,10 +1255,7 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(document, EVENT_CLICK_DATA_API$5, SELECTOR_DATA_SLIDE, function (event) {
     const target = SelectorEngine.getElementFromSelector(this);
     if (!target || !target.classList.contains(CLASS_NAME_CAROUSEL)) {
@@ -1444,24 +1284,12 @@
     }
   });
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Carousel);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap collapse.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$b = 'collapse';
   const DATA_KEY$7 = 'bs.collapse';
   const EVENT_KEY$7 = `.${DATA_KEY$7}`;
@@ -1490,10 +1318,7 @@
     toggle: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Collapse extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -1662,10 +1487,7 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(document, EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$4, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.target.tagName === 'A' || event.delegateTarget && event.delegateTarget.tagName === 'A') {
@@ -1678,10 +1500,7 @@
     }
   });
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Collapse);
 
   var top = 'top';
@@ -1696,801 +1515,7 @@
   var viewport = 'viewport';
   var popper = 'popper';
   var reference = 'reference';
-  var variationPlacements = /*#__PURE__*/basePlacements.reduce(function (acc, placement) {
-    return acc.concat([placement + "-" + start, placement + "-" + end]);
-  }, []);
-  var placements = /*#__PURE__*/[].concat(basePlacements, [auto]).reduce(function (acc, placement) {
-    return acc.concat([placement, placement + "-" + start, placement + "-" + end]);
-  }, []); // modifiers that need to read the DOM
-
-  var beforeRead = 'beforeRead';
-  var read = 'read';
-  var afterRead = 'afterRead'; // pure-logic modifiers
-
-  var beforeMain = 'beforeMain';
-  var main = 'main';
-  var afterMain = 'afterMain'; // modifier with the purpose to write to the DOM (or write into a framework state)
-
-  var beforeWrite = 'beforeWrite';
-  var write = 'write';
-  var afterWrite = 'afterWrite';
-  var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
-
-  function getNodeName(element) {
-    return element ? (element.nodeName || '').toLowerCase() : null;
-  }
-
-  function getWindow(node) {
-    if (node == null) {
-      return window;
-    }
-
-    if (node.toString() !== '[object Window]') {
-      var ownerDocument = node.ownerDocument;
-      return ownerDocument ? ownerDocument.defaultView || window : window;
-    }
-
-    return node;
-  }
-
-  function isElement(node) {
-    var OwnElement = getWindow(node).Element;
-    return node instanceof OwnElement || node instanceof Element;
-  }
-
-  function isHTMLElement(node) {
-    var OwnElement = getWindow(node).HTMLElement;
-    return node instanceof OwnElement || node instanceof HTMLElement;
-  }
-
-  function isShadowRoot(node) {
-    // IE 11 has no ShadowRoot
-    if (typeof ShadowRoot === 'undefined') {
-      return false;
-    }
-
-    var OwnElement = getWindow(node).ShadowRoot;
-    return node instanceof OwnElement || node instanceof ShadowRoot;
-  }
-
-  // and applies them to the HTMLElements such as popper and arrow
-
-  function applyStyles(_ref) {
-    var state = _ref.state;
-    Object.keys(state.elements).forEach(function (name) {
-      var style = state.styles[name] || {};
-      var attributes = state.attributes[name] || {};
-      var element = state.elements[name]; // arrow is optional + virtual elements
-
-      if (!isHTMLElement(element) || !getNodeName(element)) {
-        return;
-      } // Flow doesn't support to extend this property, but it's the most
-      // effective way to apply styles to an HTMLElement
-      // $FlowFixMe[cannot-write]
-
-
-      Object.assign(element.style, style);
-      Object.keys(attributes).forEach(function (name) {
-        var value = attributes[name];
-
-        if (value === false) {
-          element.removeAttribute(name);
-        } else {
-          element.setAttribute(name, value === true ? '' : value);
-        }
-      });
-    });
-  }
-
-  function effect$2(_ref2) {
-    var state = _ref2.state;
-    var initialStyles = {
-      popper: {
-        position: state.options.strategy,
-        left: '0',
-        top: '0',
-        margin: '0'
-      },
-      arrow: {
-        position: 'absolute'
-      },
-      reference: {}
-    };
-    Object.assign(state.elements.popper.style, initialStyles.popper);
-    state.styles = initialStyles;
-
-    if (state.elements.arrow) {
-      Object.assign(state.elements.arrow.style, initialStyles.arrow);
-    }
-
-    return function () {
-      Object.keys(state.elements).forEach(function (name) {
-        var element = state.elements[name];
-        var attributes = state.attributes[name] || {};
-        var styleProperties = Object.keys(state.styles.hasOwnProperty(name) ? state.styles[name] : initialStyles[name]); // Set all values to an empty string to unset them
-
-        var style = styleProperties.reduce(function (style, property) {
-          style[property] = '';
-          return style;
-        }, {}); // arrow is optional + virtual elements
-
-        if (!isHTMLElement(element) || !getNodeName(element)) {
-          return;
-        }
-
-        Object.assign(element.style, style);
-        Object.keys(attributes).forEach(function (attribute) {
-          element.removeAttribute(attribute);
-        });
-      });
-    };
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const applyStyles$1 = {
-    name: 'applyStyles',
-    enabled: true,
-    phase: 'write',
-    fn: applyStyles,
-    effect: effect$2,
-    requires: ['computeStyles']
-  };
-
-  function getBasePlacement(placement) {
-    return placement.split('-')[0];
-  }
-
-  var max = Math.max;
-  var min = Math.min;
-  var round = Math.round;
-
-  function getUAString() {
-    var uaData = navigator.userAgentData;
-
-    if (uaData != null && uaData.brands && Array.isArray(uaData.brands)) {
-      return uaData.brands.map(function (item) {
-        return item.brand + "/" + item.version;
-      }).join(' ');
-    }
-
-    return navigator.userAgent;
-  }
-
-  function isLayoutViewport() {
-    return !/^((?!chrome|android).)*safari/i.test(getUAString());
-  }
-
-  function getBoundingClientRect(element, includeScale, isFixedStrategy) {
-    if (includeScale === void 0) {
-      includeScale = false;
-    }
-
-    if (isFixedStrategy === void 0) {
-      isFixedStrategy = false;
-    }
-
-    var clientRect = element.getBoundingClientRect();
-    var scaleX = 1;
-    var scaleY = 1;
-
-    if (includeScale && isHTMLElement(element)) {
-      scaleX = element.offsetWidth > 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
-      scaleY = element.offsetHeight > 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
-    }
-
-    var _ref = isElement(element) ? getWindow(element) : window,
-        visualViewport = _ref.visualViewport;
-
-    var addVisualOffsets = !isLayoutViewport() && isFixedStrategy;
-    var x = (clientRect.left + (addVisualOffsets && visualViewport ? visualViewport.offsetLeft : 0)) / scaleX;
-    var y = (clientRect.top + (addVisualOffsets && visualViewport ? visualViewport.offsetTop : 0)) / scaleY;
-    var width = clientRect.width / scaleX;
-    var height = clientRect.height / scaleY;
-    return {
-      width: width,
-      height: height,
-      top: y,
-      right: x + width,
-      bottom: y + height,
-      left: x,
-      x: x,
-      y: y
-    };
-  }
-
-  // means it doesn't take into account transforms.
-
-  function getLayoutRect(element) {
-    var clientRect = getBoundingClientRect(element); // Use the clientRect sizes if it's not been transformed.
-    // Fixes https://github.com/popperjs/popper-core/issues/1223
-
-    var width = element.offsetWidth;
-    var height = element.offsetHeight;
-
-    if (Math.abs(clientRect.width - width) <= 1) {
-      width = clientRect.width;
-    }
-
-    if (Math.abs(clientRect.height - height) <= 1) {
-      height = clientRect.height;
-    }
-
-    return {
-      x: element.offsetLeft,
-      y: element.offsetTop,
-      width: width,
-      height: height
-    };
-  }
-
-  function contains(parent, child) {
-    var rootNode = child.getRootNode && child.getRootNode(); // First, attempt with faster native method
-
-    if (parent.contains(child)) {
-      return true;
-    } // then fallback to custom implementation with Shadow DOM support
-    else if (rootNode && isShadowRoot(rootNode)) {
-        var next = child;
-
-        do {
-          if (next && parent.isSameNode(next)) {
-            return true;
-          } // $FlowFixMe[prop-missing]: need a better way to handle this...
-
-
-          next = next.parentNode || next.host;
-        } while (next);
-      } // Give up, the result is false
-
-
-    return false;
-  }
-
-  function getComputedStyle$1(element) {
-    return getWindow(element).getComputedStyle(element);
-  }
-
-  function isTableElement(element) {
-    return ['table', 'td', 'th'].indexOf(getNodeName(element)) >= 0;
-  }
-
-  function getDocumentElement(element) {
-    // $FlowFixMe[incompatible-return]: assume body is always available
-    return ((isElement(element) ? element.ownerDocument : // $FlowFixMe[prop-missing]
-    element.document) || window.document).documentElement;
-  }
-
-  function getParentNode(element) {
-    if (getNodeName(element) === 'html') {
-      return element;
-    }
-
-    return (// this is a quicker (but less type safe) way to save quite some bytes from the bundle
-      // $FlowFixMe[incompatible-return]
-      // $FlowFixMe[prop-missing]
-      element.assignedSlot || // step into the shadow DOM of the parent of a slotted node
-      element.parentNode || ( // DOM Element detected
-      isShadowRoot(element) ? element.host : null) || // ShadowRoot detected
-      // $FlowFixMe[incompatible-call]: HTMLElement is a Node
-      getDocumentElement(element) // fallback
-
-    );
-  }
-
-  function getTrueOffsetParent(element) {
-    if (!isHTMLElement(element) || // https://github.com/popperjs/popper-core/issues/837
-    getComputedStyle$1(element).position === 'fixed') {
-      return null;
-    }
-
-    return element.offsetParent;
-  } // `.offsetParent` reports `null` for fixed elements, while absolute elements
-  // return the containing block
-
-
-  function getContainingBlock(element) {
-    var isFirefox = /firefox/i.test(getUAString());
-    var isIE = /Trident/i.test(getUAString());
-
-    if (isIE && isHTMLElement(element)) {
-      // In IE 9, 10 and 11 fixed elements containing block is always established by the viewport
-      var elementCss = getComputedStyle$1(element);
-
-      if (elementCss.position === 'fixed') {
-        return null;
-      }
-    }
-
-    var currentNode = getParentNode(element);
-
-    if (isShadowRoot(currentNode)) {
-      currentNode = currentNode.host;
-    }
-
-    while (isHTMLElement(currentNode) && ['html', 'body'].indexOf(getNodeName(currentNode)) < 0) {
-      var css = getComputedStyle$1(currentNode); // This is non-exhaustive but covers the most common CSS properties that
-      // create a containing block.
-      // https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block
-
-      if (css.transform !== 'none' || css.perspective !== 'none' || css.contain === 'paint' || ['transform', 'perspective'].indexOf(css.willChange) !== -1 || isFirefox && css.willChange === 'filter' || isFirefox && css.filter && css.filter !== 'none') {
-        return currentNode;
-      } else {
-        currentNode = currentNode.parentNode;
-      }
-    }
-
-    return null;
-  } // Gets the closest ancestor positioned element. Handles some edge cases,
-  // such as table ancestors and cross browser bugs.
-
-
-  function getOffsetParent(element) {
-    var window = getWindow(element);
-    var offsetParent = getTrueOffsetParent(element);
-
-    while (offsetParent && isTableElement(offsetParent) && getComputedStyle$1(offsetParent).position === 'static') {
-      offsetParent = getTrueOffsetParent(offsetParent);
-    }
-
-    if (offsetParent && (getNodeName(offsetParent) === 'html' || getNodeName(offsetParent) === 'body' && getComputedStyle$1(offsetParent).position === 'static')) {
-      return window;
-    }
-
-    return offsetParent || getContainingBlock(element) || window;
-  }
-
-  function getMainAxisFromPlacement(placement) {
-    return ['top', 'bottom'].indexOf(placement) >= 0 ? 'x' : 'y';
-  }
-
-  function within(min$1, value, max$1) {
-    return max(min$1, min(value, max$1));
-  }
-  function withinMaxClamp(min, value, max) {
-    var v = within(min, value, max);
-    return v > max ? max : v;
-  }
-
-  function getFreshSideObject() {
-    return {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0
-    };
-  }
-
-  function mergePaddingObject(paddingObject) {
-    return Object.assign({}, getFreshSideObject(), paddingObject);
-  }
-
-  function expandToHashMap(value, keys) {
-    return keys.reduce(function (hashMap, key) {
-      hashMap[key] = value;
-      return hashMap;
-    }, {});
-  }
-
-  var toPaddingObject = function toPaddingObject(padding, state) {
-    padding = typeof padding === 'function' ? padding(Object.assign({}, state.rects, {
-      placement: state.placement
-    })) : padding;
-    return mergePaddingObject(typeof padding !== 'number' ? padding : expandToHashMap(padding, basePlacements));
-  };
-
-  function arrow(_ref) {
-    var _state$modifiersData$;
-
-    var state = _ref.state,
-        name = _ref.name,
-        options = _ref.options;
-    var arrowElement = state.elements.arrow;
-    var popperOffsets = state.modifiersData.popperOffsets;
-    var basePlacement = getBasePlacement(state.placement);
-    var axis = getMainAxisFromPlacement(basePlacement);
-    var isVertical = [left, right].indexOf(basePlacement) >= 0;
-    var len = isVertical ? 'height' : 'width';
-
-    if (!arrowElement || !popperOffsets) {
-      return;
-    }
-
-    var paddingObject = toPaddingObject(options.padding, state);
-    var arrowRect = getLayoutRect(arrowElement);
-    var minProp = axis === 'y' ? top : left;
-    var maxProp = axis === 'y' ? bottom : right;
-    var endDiff = state.rects.reference[len] + state.rects.reference[axis] - popperOffsets[axis] - state.rects.popper[len];
-    var startDiff = popperOffsets[axis] - state.rects.reference[axis];
-    var arrowOffsetParent = getOffsetParent(arrowElement);
-    var clientSize = arrowOffsetParent ? axis === 'y' ? arrowOffsetParent.clientHeight || 0 : arrowOffsetParent.clientWidth || 0 : 0;
-    var centerToReference = endDiff / 2 - startDiff / 2; // Make sure the arrow doesn't overflow the popper if the center point is
-    // outside of the popper bounds
-
-    var min = paddingObject[minProp];
-    var max = clientSize - arrowRect[len] - paddingObject[maxProp];
-    var center = clientSize / 2 - arrowRect[len] / 2 + centerToReference;
-    var offset = within(min, center, max); // Prevents breaking syntax highlighting...
-
-    var axisProp = axis;
-    state.modifiersData[name] = (_state$modifiersData$ = {}, _state$modifiersData$[axisProp] = offset, _state$modifiersData$.centerOffset = offset - center, _state$modifiersData$);
-  }
-
-  function effect$1(_ref2) {
-    var state = _ref2.state,
-        options = _ref2.options;
-    var _options$element = options.element,
-        arrowElement = _options$element === void 0 ? '[data-popper-arrow]' : _options$element;
-
-    if (arrowElement == null) {
-      return;
-    } // CSS selector
-
-
-    if (typeof arrowElement === 'string') {
-      arrowElement = state.elements.popper.querySelector(arrowElement);
-
-      if (!arrowElement) {
-        return;
-      }
-    }
-
-    if (!contains(state.elements.popper, arrowElement)) {
-      return;
-    }
-
-    state.elements.arrow = arrowElement;
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const arrow$1 = {
-    name: 'arrow',
-    enabled: true,
-    phase: 'main',
-    fn: arrow,
-    effect: effect$1,
-    requires: ['popperOffsets'],
-    requiresIfExists: ['preventOverflow']
-  };
-
-  function getVariation(placement) {
-    return placement.split('-')[1];
-  }
-
-  var unsetSides = {
-    top: 'auto',
-    right: 'auto',
-    bottom: 'auto',
-    left: 'auto'
-  }; // Round the offsets to the nearest suitable subpixel based on the DPR.
-  // Zooming can change the DPR, but it seems to report a value that will
-  // cleanly divide the values into the appropriate subpixels.
-
-  function roundOffsetsByDPR(_ref, win) {
-    var x = _ref.x,
-        y = _ref.y;
-    var dpr = win.devicePixelRatio || 1;
-    return {
-      x: round(x * dpr) / dpr || 0,
-      y: round(y * dpr) / dpr || 0
-    };
-  }
-
-  function mapToStyles(_ref2) {
-    var _Object$assign2;
-
-    var popper = _ref2.popper,
-        popperRect = _ref2.popperRect,
-        placement = _ref2.placement,
-        variation = _ref2.variation,
-        offsets = _ref2.offsets,
-        position = _ref2.position,
-        gpuAcceleration = _ref2.gpuAcceleration,
-        adaptive = _ref2.adaptive,
-        roundOffsets = _ref2.roundOffsets,
-        isFixed = _ref2.isFixed;
-    var _offsets$x = offsets.x,
-        x = _offsets$x === void 0 ? 0 : _offsets$x,
-        _offsets$y = offsets.y,
-        y = _offsets$y === void 0 ? 0 : _offsets$y;
-
-    var _ref3 = typeof roundOffsets === 'function' ? roundOffsets({
-      x: x,
-      y: y
-    }) : {
-      x: x,
-      y: y
-    };
-
-    x = _ref3.x;
-    y = _ref3.y;
-    var hasX = offsets.hasOwnProperty('x');
-    var hasY = offsets.hasOwnProperty('y');
-    var sideX = left;
-    var sideY = top;
-    var win = window;
-
-    if (adaptive) {
-      var offsetParent = getOffsetParent(popper);
-      var heightProp = 'clientHeight';
-      var widthProp = 'clientWidth';
-
-      if (offsetParent === getWindow(popper)) {
-        offsetParent = getDocumentElement(popper);
-
-        if (getComputedStyle$1(offsetParent).position !== 'static' && position === 'absolute') {
-          heightProp = 'scrollHeight';
-          widthProp = 'scrollWidth';
-        }
-      } // $FlowFixMe[incompatible-cast]: force type refinement, we compare offsetParent with window above, but Flow doesn't detect it
-
-
-      offsetParent = offsetParent;
-
-      if (placement === top || (placement === left || placement === right) && variation === end) {
-        sideY = bottom;
-        var offsetY = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.height : // $FlowFixMe[prop-missing]
-        offsetParent[heightProp];
-        y -= offsetY - popperRect.height;
-        y *= gpuAcceleration ? 1 : -1;
-      }
-
-      if (placement === left || (placement === top || placement === bottom) && variation === end) {
-        sideX = right;
-        var offsetX = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.width : // $FlowFixMe[prop-missing]
-        offsetParent[widthProp];
-        x -= offsetX - popperRect.width;
-        x *= gpuAcceleration ? 1 : -1;
-      }
-    }
-
-    var commonStyles = Object.assign({
-      position: position
-    }, adaptive && unsetSides);
-
-    var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
-      x: x,
-      y: y
-    }, getWindow(popper)) : {
-      x: x,
-      y: y
-    };
-
-    x = _ref4.x;
-    y = _ref4.y;
-
-    if (gpuAcceleration) {
-      var _Object$assign;
-
-      return Object.assign({}, commonStyles, (_Object$assign = {}, _Object$assign[sideY] = hasY ? '0' : '', _Object$assign[sideX] = hasX ? '0' : '', _Object$assign.transform = (win.devicePixelRatio || 1) <= 1 ? "translate(" + x + "px, " + y + "px)" : "translate3d(" + x + "px, " + y + "px, 0)", _Object$assign));
-    }
-
-    return Object.assign({}, commonStyles, (_Object$assign2 = {}, _Object$assign2[sideY] = hasY ? y + "px" : '', _Object$assign2[sideX] = hasX ? x + "px" : '', _Object$assign2.transform = '', _Object$assign2));
-  }
-
-  function computeStyles(_ref5) {
-    var state = _ref5.state,
-        options = _ref5.options;
-    var _options$gpuAccelerat = options.gpuAcceleration,
-        gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat,
-        _options$adaptive = options.adaptive,
-        adaptive = _options$adaptive === void 0 ? true : _options$adaptive,
-        _options$roundOffsets = options.roundOffsets,
-        roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
-    var commonStyles = {
-      placement: getBasePlacement(state.placement),
-      variation: getVariation(state.placement),
-      popper: state.elements.popper,
-      popperRect: state.rects.popper,
-      gpuAcceleration: gpuAcceleration,
-      isFixed: state.options.strategy === 'fixed'
-    };
-
-    if (state.modifiersData.popperOffsets != null) {
-      state.styles.popper = Object.assign({}, state.styles.popper, mapToStyles(Object.assign({}, commonStyles, {
-        offsets: state.modifiersData.popperOffsets,
-        position: state.options.strategy,
-        adaptive: adaptive,
-        roundOffsets: roundOffsets
-      })));
-    }
-
-    if (state.modifiersData.arrow != null) {
-      state.styles.arrow = Object.assign({}, state.styles.arrow, mapToStyles(Object.assign({}, commonStyles, {
-        offsets: state.modifiersData.arrow,
-        position: 'absolute',
-        adaptive: false,
-        roundOffsets: roundOffsets
-      })));
-    }
-
-    state.attributes.popper = Object.assign({}, state.attributes.popper, {
-      'data-popper-placement': state.placement
-    });
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const computeStyles$1 = {
-    name: 'computeStyles',
-    enabled: true,
-    phase: 'beforeWrite',
-    fn: computeStyles,
-    data: {}
-  };
-
-  var passive = {
-    passive: true
-  };
-
-  function effect(_ref) {
-    var state = _ref.state,
-        instance = _ref.instance,
-        options = _ref.options;
-    var _options$scroll = options.scroll,
-        scroll = _options$scroll === void 0 ? true : _options$scroll,
-        _options$resize = options.resize,
-        resize = _options$resize === void 0 ? true : _options$resize;
-    var window = getWindow(state.elements.popper);
-    var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
-
-    if (scroll) {
-      scrollParents.forEach(function (scrollParent) {
-        scrollParent.addEventListener('scroll', instance.update, passive);
-      });
-    }
-
-    if (resize) {
-      window.addEventListener('resize', instance.update, passive);
-    }
-
-    return function () {
-      if (scroll) {
-        scrollParents.forEach(function (scrollParent) {
-          scrollParent.removeEventListener('scroll', instance.update, passive);
-        });
-      }
-
-      if (resize) {
-        window.removeEventListener('resize', instance.update, passive);
-      }
-    };
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const eventListeners = {
-    name: 'eventListeners',
-    enabled: true,
-    phase: 'write',
-    fn: function fn() {},
-    effect: effect,
-    data: {}
-  };
-
-  var hash$1 = {
-    left: 'right',
-    right: 'left',
-    bottom: 'top',
-    top: 'bottom'
-  };
-  function getOppositePlacement(placement) {
-    return placement.replace(/left|right|bottom|top/g, function (matched) {
-      return hash$1[matched];
-    });
-  }
-
-  var hash = {
-    start: 'end',
-    end: 'start'
-  };
-  function getOppositeVariationPlacement(placement) {
-    return placement.replace(/start|end/g, function (matched) {
-      return hash[matched];
-    });
-  }
-
-  function getWindowScroll(node) {
-    var win = getWindow(node);
-    var scrollLeft = win.pageXOffset;
-    var scrollTop = win.pageYOffset;
-    return {
-      scrollLeft: scrollLeft,
-      scrollTop: scrollTop
-    };
-  }
-
-  function getWindowScrollBarX(element) {
-    // If <html> has a CSS width greater than the viewport, then this will be
-    // incorrect for RTL.
-    // Popper 1 is broken in this case and never had a bug report so let's assume
-    // it's not an issue. I don't think anyone ever specifies width on <html>
-    // anyway.
-    // Browsers where the left scrollbar doesn't cause an issue report `0` for
-    // this (e.g. Edge 2019, IE11, Safari)
-    return getBoundingClientRect(getDocumentElement(element)).left + getWindowScroll(element).scrollLeft;
-  }
-
-  function getViewportRect(element, strategy) {
-    var win = getWindow(element);
-    var html = getDocumentElement(element);
-    var visualViewport = win.visualViewport;
-    var width = html.clientWidth;
-    var height = html.clientHeight;
-    var x = 0;
-    var y = 0;
-
-    if (visualViewport) {
-      width = visualViewport.width;
-      height = visualViewport.height;
-      var layoutViewport = isLayoutViewport();
-
-      if (layoutViewport || !layoutViewport && strategy === 'fixed') {
-        x = visualViewport.offsetLeft;
-        y = visualViewport.offsetTop;
-      }
-    }
-
-    return {
-      width: width,
-      height: height,
-      x: x + getWindowScrollBarX(element),
-      y: y
-    };
-  }
-
-  // of the `<html>` and `<body>` rect bounds if horizontally scrollable
-
-  function getDocumentRect(element) {
-    var _element$ownerDocumen;
-
-    var html = getDocumentElement(element);
-    var winScroll = getWindowScroll(element);
-    var body = (_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body;
-    var width = max(html.scrollWidth, html.clientWidth, body ? body.scrollWidth : 0, body ? body.clientWidth : 0);
-    var height = max(html.scrollHeight, html.clientHeight, body ? body.scrollHeight : 0, body ? body.clientHeight : 0);
-    var x = -winScroll.scrollLeft + getWindowScrollBarX(element);
-    var y = -winScroll.scrollTop;
-
-    if (getComputedStyle$1(body || html).direction === 'rtl') {
-      x += max(html.clientWidth, body ? body.clientWidth : 0) - width;
-    }
-
-    return {
-      width: width,
-      height: height,
-      x: x,
-      y: y
-    };
-  }
-
-  function isScrollParent(element) {
-    // Firefox wants us to check `-x` and `-y` variations as well
-    var _getComputedStyle = getComputedStyle$1(element),
-        overflow = _getComputedStyle.overflow,
-        overflowX = _getComputedStyle.overflowX,
-        overflowY = _getComputedStyle.overflowY;
-
-    return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
-  }
-
-  function getScrollParent(node) {
-    if (['html', 'body', '#document'].indexOf(getNodeName(node)) >= 0) {
-      // $FlowFixMe[incompatible-return]: assume body is always available
-      return node.ownerDocument.body;
-    }
-
-    if (isHTMLElement(node) && isScrollParent(node)) {
-      return node;
-    }
-
-    return getScrollParent(getParentNode(node));
-  }
-
-  /*
-  given a DOM element, return the list of all scroll parents, up the list of ancesors
-  until we get to the top window object. This list is what we attach scroll listeners
-  to, because if any of these parent elements scroll, we'll need to re-calculate the
-  reference element's position.
-  */
-
+  var variationPlacements =  
   function listScrollParents(element, list) {
     var _element$ownerDocumen;
 
@@ -3467,72 +2492,9 @@
       return instance;
     };
   }
-  var createPopper$2 = /*#__PURE__*/popperGenerator(); // eslint-disable-next-line import/no-unused-modules
+  var createPopper$2 =  
 
-  var defaultModifiers$1 = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1];
-  var createPopper$1 = /*#__PURE__*/popperGenerator({
-    defaultModifiers: defaultModifiers$1
-  }); // eslint-disable-next-line import/no-unused-modules
-
-  var defaultModifiers = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1, offset$1, flip$1, preventOverflow$1, arrow$1, hide$1];
-  var createPopper = /*#__PURE__*/popperGenerator({
-    defaultModifiers: defaultModifiers
-  }); // eslint-disable-next-line import/no-unused-modules
-
-  const Popper = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-    __proto__: null,
-    afterMain,
-    afterRead,
-    afterWrite,
-    applyStyles: applyStyles$1,
-    arrow: arrow$1,
-    auto,
-    basePlacements,
-    beforeMain,
-    beforeRead,
-    beforeWrite,
-    bottom,
-    clippingParents,
-    computeStyles: computeStyles$1,
-    createPopper,
-    createPopperBase: createPopper$2,
-    createPopperLite: createPopper$1,
-    detectOverflow,
-    end,
-    eventListeners,
-    flip: flip$1,
-    hide: hide$1,
-    left,
-    main,
-    modifierPhases,
-    offset: offset$1,
-    placements,
-    popper,
-    popperGenerator,
-    popperOffsets: popperOffsets$1,
-    preventOverflow: preventOverflow$1,
-    read,
-    reference,
-    right,
-    start,
-    top,
-    variationPlacements,
-    viewport,
-    write
-  }, Symbol.toStringTag, { value: 'Module' }));
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dropdown.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$a = 'dropdown';
   const DATA_KEY$6 = 'bs.dropdown';
   const EVENT_KEY$6 = `.${DATA_KEY$6}`;
@@ -3587,10 +2549,7 @@
     reference: '(string|element|object)'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Dropdown extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -3870,10 +2829,7 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$3, Dropdown.dataApiKeydownHandler);
   EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown.dataApiKeydownHandler);
   EventHandler.on(document, EVENT_CLICK_DATA_API$3, Dropdown.clearMenus);
@@ -3883,24 +2839,12 @@
     Dropdown.getOrCreateInstance(this).toggle();
   });
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Dropdown);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/backdrop.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$9 = 'backdrop';
   const CLASS_NAME_FADE$4 = 'fade';
   const CLASS_NAME_SHOW$5 = 'show';
@@ -3921,10 +2865,7 @@
     rootElement: '(element|string)'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Backdrop extends Config {
     constructor(config) {
       super();
@@ -4013,18 +2954,9 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/focustrap.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$8 = 'focustrap';
   const DATA_KEY$5 = 'bs.focustrap';
   const EVENT_KEY$5 = `.${DATA_KEY$5}`;
@@ -4042,10 +2974,7 @@
     trapElement: 'element'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class FocusTrap extends Config {
     constructor(config) {
       super();
@@ -4111,27 +3040,15 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/scrollBar.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
   const SELECTOR_STICKY_CONTENT = '.sticky-top';
   const PROPERTY_PADDING = 'padding-right';
   const PROPERTY_MARGIN = 'margin-right';
 
-  /**
-   * Class definition
-   */
-
+   
   class ScrollBarHelper {
     constructor() {
       this._element = document.body;
@@ -4209,18 +3126,9 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap modal.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$7 = 'modal';
   const DATA_KEY$4 = 'bs.modal';
   const EVENT_KEY$4 = `.${DATA_KEY$4}`;
@@ -4255,10 +3163,7 @@
     keyboard: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Modal extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -4440,10 +3345,7 @@
       this._element.focus();
     }
 
-    /**
-     * The following methods are used to handle overflowing modals
-     */
-
+     
     _adjustDialog() {
       const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
       const scrollbarWidth = this._scrollBar.getWidth();
@@ -4477,10 +3379,7 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$2, function (event) {
     const target = SelectorEngine.getElementFromSelector(this);
     if (['A', 'AREA'].includes(this.tagName)) {
@@ -4508,24 +3407,12 @@
   });
   enableDismissTrigger(Modal);
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Modal);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap offcanvas.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$6 = 'offcanvas';
   const DATA_KEY$3 = 'bs.offcanvas';
   const EVENT_KEY$3 = `.${DATA_KEY$3}`;
@@ -4557,10 +3444,7 @@
     scroll: 'boolean'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Offcanvas extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -4698,10 +3582,7 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE$1, function (event) {
     const target = SelectorEngine.getElementFromSelector(this);
     if (['A', 'AREA'].includes(this.tagName)) {
@@ -4739,19 +3620,10 @@
   });
   enableDismissTrigger(Offcanvas);
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Offcanvas);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/sanitizer.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
+   
   // js-docs-start allow-list
   const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
   const DefaultAllowlist = {
@@ -4794,13 +3666,7 @@
 
   const uriAttributes = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
 
-  /**
-   * A pattern that recognizes URLs that are safe wrt. XSS in URL navigation
-   * contexts.
-   *
-   * Shout-out to Angular https://github.com/angular/angular/blob/15.2.8/packages/core/src/sanitization/url_sanitizer.ts#L38
-   */
-  // eslint-disable-next-line unicorn/better-regex
+     // eslint-disable-next-line unicorn/better-regex
   const SAFE_URL_PATTERN = /^(?!javascript:)(?:[a-z0-9+.-]+:|[^&:/?#]*(?:[/?#]|$))/i;
   const allowedAttribute = (attribute, allowedAttributeList) => {
     const attributeName = attribute.nodeName.toLowerCase();
@@ -4841,18 +3707,9 @@
     return createdDocument.body.innerHTML;
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/template-factory.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$5 = 'TemplateFactory';
   const Default$4 = {
     allowList: DefaultAllowlist,
@@ -4878,10 +3735,7 @@
     selector: '(string|element)'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class TemplateFactory extends Config {
     constructor(config) {
       super();
@@ -4977,18 +3831,9 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap tooltip.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$4 = 'tooltip';
   const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn']);
   const CLASS_NAME_FADE$2 = 'fade';
@@ -5057,10 +3902,7 @@
     trigger: 'string'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Tooltip extends BaseComponent {
     constructor(element, config) {
       if (typeof Popper === 'undefined') {
@@ -5482,24 +4324,12 @@
     }
   }
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Tooltip);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap popover.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$3 = 'popover';
   const SELECTOR_TITLE = '.popover-header';
   const SELECTOR_CONTENT = '.popover-body';
@@ -5516,10 +4346,7 @@
     content: '(null|string|element|function)'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Popover extends Tooltip {
     // Getters
     static get Default() {
@@ -5563,24 +4390,12 @@
     }
   }
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Popover);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap scrollspy.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$2 = 'scrollspy';
   const DATA_KEY$2 = 'bs.scrollspy';
   const EVENT_KEY$2 = `.${DATA_KEY$2}`;
@@ -5616,10 +4431,7 @@
     threshold: 'array'
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class ScrollSpy extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -5813,34 +4625,19 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(window, EVENT_LOAD_DATA_API$1, () => {
     for (const spy of SelectorEngine.find(SELECTOR_DATA_SPY)) {
       ScrollSpy.getOrCreateInstance(spy);
     }
   });
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(ScrollSpy);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap tab.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME$1 = 'tab';
   const DATA_KEY$1 = 'bs.tab';
   const EVENT_KEY$1 = `.${DATA_KEY$1}`;
@@ -5871,10 +4668,7 @@
   const SELECTOR_INNER_ELEM = `${SELECTOR_INNER}, ${SELECTOR_DATA_TOGGLE}`;
   const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-bs-toggle="tab"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="pill"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="list"]`;
 
-  /**
-   * Class definition
-   */
-
+   
   class Tab extends BaseComponent {
     constructor(element) {
       super(element);
@@ -6071,10 +4865,7 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
@@ -6085,32 +4876,17 @@
     Tab.getOrCreateInstance(this).show();
   });
 
-  /**
-   * Initialize on focus
-   */
-  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+     EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE_ACTIVE)) {
       Tab.getOrCreateInstance(element);
     }
   });
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Tab);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap toast.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   
 
-
-  /**
-   * Constants
-   */
-
+   
   const NAME = 'toast';
   const DATA_KEY = 'bs.toast';
   const EVENT_KEY = `.${DATA_KEY}`;
@@ -6137,10 +4913,7 @@
     delay: 5000
   };
 
-  /**
-   * Class definition
-   */
-
+   
   class Toast extends BaseComponent {
     constructor(element, config) {
       super(element, config);
@@ -6271,25 +5044,13 @@
     }
   }
 
-  /**
-   * Data API implementation
-   */
-
+   
   enableDismissTrigger(Toast);
 
-  /**
-   * jQuery
-   */
-
+   
   defineJQueryPlugin(Toast);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap index.umd.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
+   
   const index_umd = {
     Alert,
     Button,

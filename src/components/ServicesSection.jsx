@@ -16,7 +16,7 @@ const Services = () => {
 
           <div className="row">
 
-            {/* Power Productivity Pack */}
+         
             <div className="col-12 col-md-6 col-lg-4">
               <div className="card">
                 <i className="fas fa-bolt card-icon"></i>

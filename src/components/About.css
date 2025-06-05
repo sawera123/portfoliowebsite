@@ -1,5 +1,4 @@
-/* # About Section */
-.about .about-image {
+ .about .about-image {
   position: relative;
 }
 
@@ -39,8 +38,7 @@
 
 .about .about-content .lead {
   font-size: 1.1rem;
-  color: rgba(10, 15, 20, 0.75); /* if --default-color = #0a0f14 */
-}
+  color: rgba(10, 15, 20, 0.75);  }
 
 .about .personal-info {
   margin-top: 2rem;
@@ -58,7 +56,7 @@
 
 .about .personal-info .info-item .label {
   font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+color: rgba(10, 15, 20, 0.6);
 }
 
 .about .personal-info .info-item .value {

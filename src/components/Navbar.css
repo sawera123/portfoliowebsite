@@ -1,5 +1,4 @@
-/* Basic reset */
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,8 +13,7 @@ body.dark-mode {
   color: #f4f4f4;
 }
 
-/* Navbar Styling */
-.navbar {
+ .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,16 +34,14 @@ body.dark-mode .navbar {
   color: #f4f4f4;
 }
 
-/* Root Vars */
-:root {
+ :root {
   --nav-background: #fff;
   --nav-color: #222;
   --accent-color: #FFB900;
   --transition-speed: 0.4s;
 }
 
-/* General Styles */
-.main-header {
+ .main-header {
   background: var(--nav-background);
   padding: 15px 30px;
   position: sticky;
@@ -74,8 +70,7 @@ body.dark-mode .navbar {
   color: var(--accent-color);
 }
 
-/* Nav Links */
-.nav-center {
+ .nav-center {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -118,8 +113,7 @@ body.dark-mode .navbar {
   width: 100%;
 }
 
-/* Action Buttons */
-.nav-actions {
+ .nav-actions {
   display: flex;
   align-items: center;
   gap: 18px;
@@ -140,8 +134,7 @@ body.dark-mode .navbar {
   color: var(--accent-color);
 }
 
-/* Mobile Styles */
-.menu-btn {
+ .menu-btn {
   display: none;
 }
 
@@ -172,8 +165,7 @@ body.dark-mode .navbar {
     color: var(--nav-color);
   }
 
-  /* Close button inside mobile nav */
-  .close-btn {
+     .close-btn {
     position: absolute;
     top: 20px;
     right: 25px;
@@ -181,8 +173,7 @@ body.dark-mode .navbar {
   }
 }
 
-/* Dark Mode Support */
-body.dark-mode {
+ body.dark-mode {
   --nav-background: #121212;
   --nav-color: #fff;
   --accent-color: #FFB900;
