@@ -39,7 +39,7 @@
 
 .about .about-content .lead {
   font-size: 1.1rem;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: rgba(10, 15, 20, 0.75); /* if --default-color = #0a0f14 */
 }
 
 .about .personal-info {
@@ -47,7 +47,7 @@
   padding: 2rem;
   background-color: var(--surface-color);
   border-radius: 1rem;
-  box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
 }
 
 .about .personal-info .info-item {
@@ -83,15 +83,8 @@
   width:35px;
   height:35px;
   border-radius: 50%;
-  border-radius: 50%;
-  border-radius: 50%;
-  border-radius: 50%;
-  border-radius: 50%;
   margin-right:0.6rem;
   transition: all .3s ease;
-  transition: all .3s ease;
-  transition: all .3s ease;
-  transition: all .3s ease;
-  transition: all .3s ease;
+
 }
 

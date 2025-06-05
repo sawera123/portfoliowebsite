@@ -6,7 +6,7 @@ import Portfolio from "./Portfolio";
 import ResumeSection from "./ResumeSection"
 import ServicesSection from "./ServicesSection";
 import ContactForm from "./ContactForm"
-import Karthikeyan_Resume from "../assets/Karthikeyan_Resume.pdf"
+
 
 function Hero() {
   const [text, setText] = useState("");

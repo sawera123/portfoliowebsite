@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-// import portfolio css
 import "./Portfolio.css"
 import Isotope from "isotope-layout";
 import imagesLoaded from "imagesloaded";
