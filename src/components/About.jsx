@@ -26,7 +26,7 @@ function About() {
           <div className="row align-items-center">
             <div className="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
               <div className="about-image">
-                <img src={portfolioimg } alt="Profile Image" className="img-fluid rounded-4"/>
+                <img src={ portfolioimg } alt="Profile Image karthikeyan" className="img-fluid rounded-4"/>
               </div>
             </div>
 
@@ -85,10 +85,10 @@ function About() {
                 </div>
 
                 <div class="social">
-                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="/"><i class="fas fa-globe"></i></a>
                                 <a href="https://www.facebook.com/codersgyan"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://twitter.com/CoderGyan"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                                <a href="/"><i class="fab fa-pinterest"></i></a>
                             </div>
               </div>
             </div>

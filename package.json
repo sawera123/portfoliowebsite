@@ -2,6 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+    "homepage": "https://sawera123.github.io/portfoliowebsite",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "ajv": "^8.17.1",
