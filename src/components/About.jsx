@@ -26,7 +26,7 @@ function About() {
           <div className="row align-items-center">
             <div className="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
               <div className="about-image">
-                <img src={ portfolioimg } alt="Profile Image karthikeyan" className="img-fluid rounded-4"/>
+                <img src={ portfolioimg } alt="karthikeyan" className="img-fluid rounded-4"/>
               </div>
             </div>
 

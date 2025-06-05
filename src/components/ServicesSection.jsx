@@ -1,9 +1,9 @@
 import React from 'react';
 import './ServicesSection.css';
 import { 
-  Star, Smartphone, Globe, 
+   Smartphone, Globe, 
   MonitorCheck, Wrench, BarChart2, 
-  AppWindow, Repeat, LayoutDashboard, HelpingHand 
+  AppWindow, Repeat,
 } from 'lucide-react';
 
 const Services = () => {

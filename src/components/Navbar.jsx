@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
