@@ -48,7 +48,7 @@ const certificates = [
     desc: "Programming language used to automate tasks and create custom functions in Microsoft Excel",
     issuer: "Excel Goodies - Microsoft Gold Certified Partner",
     year: "2022",
-    url: "https://learn.microsoft.com/en-us/certifications/excel-2016-expert/"
+    url: "https://www.excelgoodies.com/VerifyCertificate/VerifyCertificateFSBI/Index?CNo1=HZ48&CNo2=29MV"
   },
   {
     title: "SQL, Data Analysis, Reporting Specialist",
@@ -104,6 +104,7 @@ const tools = [
   { name: "SAP ERP Automation",    level: "ADV", color: "#00B386" },    
   { name: "Navis Work",    level: "Inter", color: "#FBBF24" }, 
   { name: "SolidWorks",   level: "Inter", color: "#FBBF24" }, 
+  { name: "Twin Motion Unreal Engine",   level: "Inter", color: "#FBBF24" }, 
  
 ];
 

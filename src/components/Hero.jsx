@@ -44,7 +44,11 @@ function Hero() {
               I'm <span className="typing-text">{text}</span>
             </h1>
             <p className=" mb-4 description-text">
-              I'm a passionate Project Engineer having 4+ years of experience in oil and gas as Project/Planning Engineer (Offshore).Efficient in handling large datasets with precision, ensuring accurate analysis and reporting. Skilled at presenting complex data through clear visuals and easy-to-understand formats.
+             Planning Engineer with 4+ years of experience in offshore oil and gas projects, 
+             expert in creating detailed schedules using Primavera P6. Skilled at presenting complex data 
+             through clear visuals and easy-to-understand formats. Proficient in transforming data into clear 4D/5D 
+             simulations with Syncro 4D and Twinmotion, optimizing project timelines and delivering actionable insights.
+
             </p>
 
             <div className="d-flex flex-wrap gap-3">
