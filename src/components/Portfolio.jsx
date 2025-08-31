@@ -75,7 +75,7 @@ function Portfolio() {
                     <div className="portfolio-overlay">
                       <div className="portfolio-actions">
                         <a
-                          href="https://www.youtube.com/watch?v=QaXZJO1WlRA"
+                          href="https://youtu.be/PM8-bzywKfw"
                           className="glightbox preview-link"
                           data-gallery="portfolio-gallery-web"
                           data-type="video"
@@ -125,7 +125,7 @@ function Portfolio() {
                      <div className="portfolio-overlay">
                       <div className="portfolio-actions">
                         <a
-                          href="https://www.youtube.com/watch?v=QaXZJO1WlRA" // Replace with actual video or image URL
+                          href="https://youtu.be/lkOwoFvxUVo" // Replace with actual video or image URL
                           className="glightbox preview-link"
                           data-gallery="portfolio-gallery-excelvba"
                           data-type="video"
@@ -149,7 +149,7 @@ function Portfolio() {
                     <div className="portfolio-overlay">
                       <div className="portfolio-actions">
                         <a
-                          href="https://www.youtube.com/watch?v=QaXZJO1WlRA" // Replace with actual video or image URL
+                          href="https://youtu.be/Vk_7UbSKN98" // Replace with actual video or image URL
                           className="glightbox preview-link"
                           data-gallery="portfolio-gallery-excelvba"
                           data-type="video"
@@ -174,7 +174,7 @@ function Portfolio() {
                     <div className="portfolio-overlay">
                       <div className="portfolio-actions">
                         <a
-                          href="https://www.youtube.com/watch?v=QaXZJO1WlRA" // Replace with actual video or image URL
+                          href="https://youtu.be/t_JA87GIlNI" // Replace with actual video or image URL
                           className="glightbox preview-link"
                           data-gallery="portfolio-gallery-excelvba"
                           data-type="video"
@@ -199,7 +199,7 @@ function Portfolio() {
                     <div className="portfolio-overlay">
                       <div className="portfolio-actions">
                         <a
-                          href="https://www.youtube.com/watch?v=QaXZJO1WlRA" // Replace with actual video or image URL
+                          href="https://youtu.be/3j_-aGqwbzc" // Replace with actual video or image URL
                           className="glightbox preview-link"
                           data-gallery="portfolio-gallery-excelvba"
                           data-type="video"
