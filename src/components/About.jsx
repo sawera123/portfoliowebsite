@@ -24,7 +24,7 @@ function About() {
                 ></path>
               </svg>
             </div>
-            <p>Hello! I'm Project Planner </p>
+            <p>Hello! I'm Project Planneeer </p>
           </div>
           {/* End Section Title */}
 
