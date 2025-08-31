@@ -86,7 +86,7 @@ function Portfolio() {
                     </div>
                   </div>
                   <div className="portfolio-content">
-                    <span className="category">Video Demo</span>
+                    <span className="category">Automate Tasks & Send Scheduled Emails</span>
                     <h3>Power Automate</h3>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ function Portfolio() {
                   </div>
                   <div className="portfolio-content">
                     <span className="category">Power Apps</span>
-                    <h3>Creative Report Layout</h3>
+                    <h3>Power Apps</h3>
                   </div>
                 </div>
               </div>
@@ -135,8 +135,8 @@ function Portfolio() {
                       </div>
                     </div>
                   </div>           <div className="portfolio-content">
-                    <span className="category">Power BI Dashboards</span>
-                    <h3>Creative Report Layout</h3>
+                    <span className="category">Power BI Dashboard with 4D/5D Schedule Integration</span>
+                    <h3>Power BI Dashboards</h3>
                   </div>
                 </div>
               </div>
@@ -160,8 +160,8 @@ function Portfolio() {
                     </div>
                   </div>
                   <div className="portfolio-content">
-                    <span className="category">Excel VBA Automation</span>
-                    <h3>Automated Reporting & Macros</h3>
+                    <span className="category">Convert Excel to P6 Format Instantly</span>
+                    <h3>Excel VBA Automation</h3>
                   </div>
                 </div>
               </div>
@@ -185,8 +185,8 @@ function Portfolio() {
                     </div>
                   </div>
                   <div className="portfolio-content">
-                    <span className="category">Excel VBA Automation</span>
-                    <h3>Automated Reporting & Macros</h3>
+                    <span className="category">Turn P6 Schedules into Gantt Charts Instantly</span>
+                    <h3>Excel VBA Automation</h3>
                   </div>
                 </div>
               </div>
@@ -209,8 +209,8 @@ function Portfolio() {
                       </div>
                     </div>
                   </div>            <div className="portfolio-content">
-                    <span className="category">4D/5D Scheduling</span>
-                    <h3>Integrated Time & Cost Visualization</h3>
+                    <span className="category">Construction 4D/5D Simulation Syncro 4d</span>
+                    <h3>4D/5D Scheduling</h3>
                   </div>
                 </div>
               </div>
