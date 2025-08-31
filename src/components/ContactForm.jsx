@@ -8,7 +8,7 @@ const ContactForm = () => {
         <h2 className="contact-title">Contact Us</h2>
         <form 
           className="contact-form" 
-          action="https://formsubmit.co/saweragulshan2@gmail.com" 
+          action="https://formsubmit.co/Karthikeyanp3198@gmail.com" 
           method="POST"
         >
           <div className="input-group">
