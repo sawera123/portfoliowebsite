@@ -142,7 +142,7 @@ function Portfolio() {
               </div>
 
               {/* Excel VBA Automation */}
-              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-ExcelVBA">
+              <div className="col-lg-6 col-md-7 portfolio-item isotope-item filter-ExcelVBA">
                 <div className="portfolio-card">
                   <div className="portfolio-image">
                     <img src={portfolioimg5} className="img-fluid" alt="Excel VBA Automation" loading="lazy" />
