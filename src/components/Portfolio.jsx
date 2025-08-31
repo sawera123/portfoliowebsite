@@ -166,6 +166,31 @@ function Portfolio() {
                 </div>
               </div>
 
+                            {/* Excel VBA Automation */}
+              <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-ExcelVBA">
+                <div className="portfolio-card">
+                  <div className="portfolio-image">
+                    <img src={portfolioimg5} className="img-fluid" alt="Excel VBA Automation" loading="lazy" />
+                    <div className="portfolio-overlay">
+                      <div className="portfolio-actions">
+                        <a
+                          href="https://www.youtube.com/watch?v=QaXZJO1WlRA" // Replace with actual video or image URL
+                          className="glightbox preview-link"
+                          data-gallery="portfolio-gallery-excelvba"
+                          data-type="video"
+                        >
+                          <i className="bi bi-eye"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="portfolio-content">
+                    <span className="category">Excel VBA Automation</span>
+                    <h3>Automated Reporting & Macros</h3>
+                  </div>
+                </div>
+              </div>
+
               {/* 4D/5D Scheduling (New Tab Content) */}
               <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-4D5D">
                 <div className="portfolio-card">
