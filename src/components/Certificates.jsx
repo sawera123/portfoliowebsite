@@ -16,7 +16,7 @@ const certificates = [
     desc: "Comprehensive training in Oracle Primavera P6 Professional for effective project scheduling, resource management, and progress tracking in complex projects.",
     issuer: "Oracle",
     year: "2025",
-    url: "https://mylearn.oracle.com/ou/learning-path/primavera-p6-professional/94431"
+    url: "https://drive.google.com/file/d/18Xwaz-45Hsa6GLqip_azHfEhBg_fSJyM/view?usp=sharing"
   },
   {
     title: "Project Planning & Scheduling For Construction Management",
@@ -24,7 +24,7 @@ const certificates = [
     desc: "Skilled in Primavera P6, a robust project management tool for planning, scheduling, and controlling complex projects, ensuring efficient resource utilization and timely project delivery.",
     issuer: "CADD® CENTER",
     year: "2020",
-    url: "https://registry.caddcentre.com/ghbji.php?asdsad=YytRNTUrQ1A1b1RZNTVwS0svZ2l5bmZtRVB2YkF2WG9GRjUxcGllODREWnpHNlluNGpEcUljK1dKRVByOW9MSQ==%27"
+    url: "https://drive.google.com/file/d/1gtIPUwug18WzWFfiyvbnva_XA1jeRVZE/view?usp=sharing"
   },
   {
     title: "4D Scheduling, Project Visualization, Construction Management",
